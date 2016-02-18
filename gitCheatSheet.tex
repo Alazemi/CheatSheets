@@ -96,23 +96,19 @@ left=10mm,right=10mm,top=10mm,bottom=15mm}
 
 \begin{multicols*}{2}
 \section{Setup}
-
 Clone an existing repository
 \begin{lstlisting}[language=bash]
 $ git clone https://address.git
 \end{lstlisting}
-
 Create an empty local repository
 \begin{lstlisting}[language=bash]
 $ git init 
 \end{lstlisting}
-
 Add author name and email
 \begin{lstlisting}[language=bash]
 $ git config --global user.name "Fawaz M."
 $ git config --global user.email Fawaz@Fawaz.com
 \end{lstlisting}
-
 Ignore files/directories
 \begin{lstlisting}[language=bash]
 $ vim .gitignore #add files description 
@@ -141,6 +137,10 @@ $ git commit
 Commit staged files with a short message
 \begin{lstlisting}[language=bash]
 $ git commit -m "Message"
+\end{lstlisting}
+Amend the last commit message
+\begin{lstlisting}[language=bash]
+$ git commit --amend -m "Amendment"
 \end{lstlisting}
 
 
