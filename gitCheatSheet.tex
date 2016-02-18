@@ -96,19 +96,35 @@ left=10mm,right=10mm,top=10mm,bottom=15mm}
 
 \begin{multicols*}{2}
 \section{Setup}
+
 Clone an existing repository
 \begin{lstlisting}[language=bash]
 $ git clone https://address.git
 \end{lstlisting}
+
 Create an empty local repository
 \begin{lstlisting}[language=bash]
 $ git init 
 \end{lstlisting}
+
 Add author name and email
 \begin{lstlisting}[language=bash]
 $ git config --global user.name "Fawaz M."
 $ git config --global user.email Fawaz@Fawaz.com
 \end{lstlisting}
+
+Ignore files/directories
+\begin{lstlisting}[language=bash]
+$ vim .gitignore #add files description 
+$ git add .gitignore;
+$ git commit -m "ignore description"
+\end{lstlisting}
+
+
+
+
+
+
 \section{Local Changes}
 Check status (uncommitted file changes, addition, or deletion)
 \begin{lstlisting}[language=bash]
