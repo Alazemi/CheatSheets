@@ -1,3 +1,3 @@
 # CheatSheets
-For many tools I'm using, I need more commands/functions/methods than others.
-This cheat sheet will help me to memorize what i really want. 
+I need more commands/functions/methods than others.
+I need cheatsheets to help me to remember those than others.
