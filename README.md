@@ -1,2 +1,2 @@
 # CheatSheets
-cheatsheets customized to what i learned.
+cheatsheets customized to what I NEED!
