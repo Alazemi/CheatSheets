@@ -84,7 +84,7 @@ left=10mm,right=10mm,top=10mm,bottom=15mm}
 \makeatother
 
 
-\title{Git CheatSheet}
+\title{Vagrant CheatSheet}
 \author{Fawaz Alazemi}
 \date{Last update:\today}
 
@@ -92,69 +92,67 @@ left=10mm,right=10mm,top=10mm,bottom=15mm}
 
 \begin{document}
 
-\maketitle
-
+\maketitle\\
+\textit{This is a very basic for my simple usage.}
 \begin{multicols*}{2}
 \section{Setup}
-Clone an existing repository
+Download an image and create Vagrantfile in local directory. \\Alternative boxes are found in\\https://atlas.hashicorp.com/boxes/search 
 \begin{lstlisting}[language=bash]
-$ git clone https://address.git
+$ vagrant init hashicorp/precise64
+$ vagrant box USER/BOXNAME #Alternative command
 \end{lstlisting}
-Create an empty local repository
+Create and launch image described in local Vagrantfile
 \begin{lstlisting}[language=bash]
-$ git init 
+$ vagrant up
 \end{lstlisting}
-Add author name and email
+SSH to launch machine
 \begin{lstlisting}[language=bash]
-$ git config --global user.name "Fawaz M."
-$ git config --global user.email Fawaz@Fawaz.com
+$ vagrant ssh
 \end{lstlisting}
-Ignore files/directories
+Version 
 \begin{lstlisting}[language=bash]
-$ vim .gitignore #add files description 
-$ git add .gitignore;
-$ git commit -m "ignore description"
+$ vagrant --version
 \end{lstlisting}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Local Changes}
-Check status (uncommitted file changes, addition, or deletion)
+HELP! Most helps is shown by adding -h at the end
 \begin{lstlisting}[language=bash]
-$ git status
-\end{lstlisting}
-Stage all current changes
-\begin{lstlisting}[language=bash]
-$ git add .
-\end{lstlisting}
-Commit your staged files with long message  
-\begin{lstlisting}[language=bash]
-$ git commit
-\end{lstlisting}
-Commit staged files with a short message
-\begin{lstlisting}[language=bash]
-$ git commit -m "Message"
-\end{lstlisting}
-Amend the last commit message
-\begin{lstlisting}[language=bash]
-$ git commit --amend -m "Amendment"
+$ vagrant ssh -h #Just an example
 \end{lstlisting}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{History}
-Show all commits
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Turn ON/OFF and stuff in between}
+Shutdown currently running machine by Vagrant 
 \begin{lstlisting}[language=bash]
-$ git log
+$ vagrant halt
 \end{lstlisting}
-Show most n commits
+Like halt followed by an up
 \begin{lstlisting}[language=bash]
-$ git log -n
+$ vagrant reload
 \end{lstlisting}
-Show online for each commit
+Suspends running machine by Vagrant. Another option than to fully shutting  down or destroy
 \begin{lstlisting}[language=bash]
-$ git log --oneline 
+$ vagrant suspend
 \end{lstlisting}
+Resume a suspended machine
+\begin{lstlisting}[language=bash]
+$ vagrant resume
+\end{lstlisting}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Delete and CleanUp}
+Remove all files associated with running machine
+\begin{lstlisting}[language=bash]
+$ vagrant destroy
+\end{lstlisting}
+Delete a box
+\begin{lstlisting}[language=bash]
+$ vagrant box remove BOXNAME
+\end{lstlisting}
+Remove Vagrant 
+
+
+
 
 \end{multicols*}
 
