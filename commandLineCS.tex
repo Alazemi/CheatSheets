@@ -101,6 +101,27 @@ Search for a specific string in a list of files
 \begin{lstlisting}[language=bash]
 $ grep "TEXT" *.cpp
 \end{lstlisting}
+To recursively search for a pattern in a path directory and subdirectory  
+\begin{lstlisting}[language=bash]
+grep -r 'path' -e "pattern"
+\end{lstlisting}
+To show line number 
+\begin{lstlisting}[language=bash]
+grep -n "pattern" file
+\end{lstlisting}
+Ignore case
+\begin{lstlisting}[language=bash]
+grep -i "pattern" file
+\end{lstlisting}
+Whole word
+\begin{lstlisting}[language=bash]
+grep -w "pattern" file
+\end{lstlisting}
+To list only file names that include the pattern
+\begin{lstlisting}[language=bash]
+grep -l "pattern" file
+\end{lstlisting}
+
 
 
 \end{multicols*}
