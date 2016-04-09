@@ -95,7 +95,21 @@ left=10mm,right=10mm,top=10mm,bottom=15mm}
 \maketitle\\
 \textit{This is a very basic for my simple usage.}
 \begin{multicols*}{2}
-\section{Setup}
+
+
+\section{Misc}
+Delete files matching x in current and subdirectories  
+\begin{lstlisting}[language=bash]
+find . -type f -name 'x' -delete
+\end{lstlisting}
+Download a file from internet
+\begin{lstlisting}[language=bash]
+wget URL
+\end{lstlisting}
+
+
+
+
 \section{Grep}
 Search for a specific string in a list of files
 \begin{lstlisting}[language=bash]
@@ -121,7 +135,10 @@ To list only file names that include the pattern
 \begin{lstlisting}[language=bash]
 grep -l "pattern" file
 \end{lstlisting}
-
+Example, search for x in current and sub directories
+\begin{lstlisting}[language=bash]
+grep -rnw '.' -e "x"
+\end{lstlisting}
 
 
 \end{multicols*}
