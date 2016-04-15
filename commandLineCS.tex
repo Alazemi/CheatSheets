@@ -84,7 +84,7 @@ left=10mm,right=10mm,top=10mm,bottom=15mm}
 \makeatother
 
 
-\title{Command Line (Linux) CheatSheet}
+\title{Command Line (Linux) CheatSheet \normalsize \textit{for my simple need}}
 \author{Fawaz Alazemi}
 \date{Last update:\today}
 
@@ -92,50 +92,52 @@ left=10mm,right=10mm,top=10mm,bottom=15mm}
 
 \begin{document}
 
-\maketitle\\
-\textit{This is a very basic for my simple usage.}
+\maketitle
 \begin{multicols*}{2}
-
-
 \section{Misc}
-Delete files matching x in current and subdirectories  
+\textbf{\large Delete files matching x in current and subdirectories  }
 \begin{lstlisting}[language=bash]
-find . -type f -name 'x' -delete
+$ find . -type f -name 'x' -delete
 \end{lstlisting}
-Download a file from internet
+\textbf{\large Download a file from internet}
 \begin{lstlisting}[language=bash]
-wget URL
+$ wget URL
 \end{lstlisting}
+\textbf{\large Remove all temp files after make}
+\begin{lstlisting}[language=bash]
+$ make clean
+\end{lstlisting}
+
 
 
 
 
 \section{Grep}
-Search for a specific string in a list of files
+\textbf{\large Search for a specific string in a list of files}
 \begin{lstlisting}[language=bash]
 $ grep "TEXT" *.cpp
 \end{lstlisting}
-To recursively search for a pattern in a path directory and subdirectory  
+\textbf{\large To recursively search for a pattern in a path directory and subdirectory}
 \begin{lstlisting}[language=bash]
 grep -r 'path' -e "pattern"
 \end{lstlisting}
-To show line number 
+\textbf{\large To show line number }
 \begin{lstlisting}[language=bash]
 grep -n "pattern" file
 \end{lstlisting}
-Ignore case
+\textbf{\large Ignore case}
 \begin{lstlisting}[language=bash]
 grep -i "pattern" file
 \end{lstlisting}
-Whole word
+\textbf{\large Whole word}
 \begin{lstlisting}[language=bash]
 grep -w "pattern" file
 \end{lstlisting}
-To list only file names that include the pattern
+\textbf{\large To list only file names that include the pattern}
 \begin{lstlisting}[language=bash]
 grep -l "pattern" file
 \end{lstlisting}
-Example, search for x in current and sub directories
+\textbf{\large Example, search for x in current and sub directories}
 \begin{lstlisting}[language=bash]
 grep -rnw '.' -e "x"
 \end{lstlisting}
