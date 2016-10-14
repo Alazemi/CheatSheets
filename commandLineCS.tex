@@ -119,28 +119,35 @@ $ grep "TEXT" *.cpp
 \end{lstlisting}
 \textbf{\large To recursively search for a pattern in a path directory and subdirectory}
 \begin{lstlisting}[language=bash]
-grep -r 'path' -e "pattern"
+$ grep -r 'path' -e "pattern"
 \end{lstlisting}
 \textbf{\large To show line number }
 \begin{lstlisting}[language=bash]
-grep -n "pattern" file
+$ grep -n "pattern" file
 \end{lstlisting}
 \textbf{\large Ignore case}
 \begin{lstlisting}[language=bash]
-grep -i "pattern" file
+$ grep -i "pattern" file
 \end{lstlisting}
 \textbf{\large Whole word}
 \begin{lstlisting}[language=bash]
-grep -w "pattern" file
+$ grep -w "pattern" file
 \end{lstlisting}
 \textbf{\large To list only file names that include the pattern}
 \begin{lstlisting}[language=bash]
-grep -l "pattern" file
+$ grep -l "pattern" file
 \end{lstlisting}
 \textbf{\large Example, search for x in current and sub directories}
 \begin{lstlisting}[language=bash]
-grep -rnw '.' -e "x"
+$ grep -rnw '.' -e "x"
 \end{lstlisting}
+
+\section{Perl}
+\textbf{\large Replace text "abc" by "XYZ" (-i for in replacement)}
+\begin{lstlisting}[language=bash]
+$ perl -pi -e 's/abc/XYZ/g' /tmp/file.txt
+\end{lstlisting}
+
 
 
 \end{multicols*}
